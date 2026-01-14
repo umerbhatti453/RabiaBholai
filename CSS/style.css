@@ -1,0 +1,272 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000;
+  line-height: 1.6;
+  background: #fff;
+}
+
+/* =========================
+   HEADER & NAV
+========================= */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(0, 191, 99, 0.85);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 55px;
+}
+
+nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+
+nav a:hover {
+  opacity: 0.7;
+}
+
+.nav-underline {
+  height: 3px;
+  background: #136d67;
+}
+
+/* =========================
+   HERO SECTIONS
+========================= */
+.hero {
+  position: relative;
+  min-height: 75vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero h1 span {
+  display: block;
+}
+
+.hero-sub {
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+section {
+  padding: 70px 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 50px;
+}
+
+/* =========================
+   SERVICES
+========================= */
+.services-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  padding: 25px;
+  border: 1px solid #e0e0e0;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card img {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+}
+
+/* =========================
+   ABOUT PAGE
+========================= */
+.about-content {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.logos-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 25px;
+}
+
+.logos-grid img {
+  width: 100%;
+  filter: grayscale(100%);
+}
+
+/* =========================
+   CONTACT SPLIT LAYOUT
+========================= */
+.contact-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 80vh;
+}
+
+.contact-left {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.contact-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.contact-text {
+  position: relative;
+  max-width: 400px;
+}
+
+.contact-text h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.contact-right {
+  padding: 60px;
+}
+
+.contact-right h3 {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+.contact-right input,
+.contact-right textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+}
+
+.contact-right button {
+  background: #136d67;
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  cursor: pointer;
+}
+
+.contact-right button:hover {
+  opacity: 0.85;
+}
+
+.contact-note {
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.site-footer {
+  background: #fff;
+  text-align: center;
+  padding: 30px 20px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.social-icons {
+  margin-bottom: 15px;
+}
+
+.social-icons img {
+  width: 28px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.site-footer p {
+  font-size: 0.85rem;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .contact-split {
+    grid-template-columns: 1fr;
+  }
+
+  nav a {
+    margin-left: 15px;
+  }
+}
